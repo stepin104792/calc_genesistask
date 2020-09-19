@@ -13,7 +13,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, FACTORIAL, ODD_EVEN, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, FACTORIAL, ODD_EVEN, PALINDROME, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5.Factorial\n6.Odd_even\n");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5.Factorial\n6.Odd_even\n7.Palindrome\n");
     printf("\n\tEnter your choice\n");
    
      __fpurge(stdin);
@@ -121,6 +121,23 @@ void calculator_menu(void)
                 if(operand1%2==0)
                     return 0;
             }
+        case PALINDROME:
+            int palindrome(int operand1)
+            {
+                int temp,remain,sum=0;
+                temp=operand1;
+                while(operand1!=0)
+                {
+                    remain=operand1%10;
+                    sum=sum*10+remain;
+                    operand1/=10;
+                }
+                if(sum==temp)
+                    return 0;
+                else 
+                    return -1;
+            }
+                    
         case 5:
             exit(0);
             break;
