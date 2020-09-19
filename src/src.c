@@ -37,7 +37,7 @@ int factorial(int operand1)
   return operand1 * factorial(operand1-1);
 }
 
-int odd_even(int operand 1)
+int odd_even(int operand1)
 {
     /*Return -1 for odd*/
     if(operand1%2!=0)
