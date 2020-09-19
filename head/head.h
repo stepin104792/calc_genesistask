@@ -46,6 +46,11 @@ int multiply(int operand1, int operand2);
 int divide(int operand1, int operand2);
 
 int factorial(int operand1);
+/*checks the factorial of a number*/
 
 int odd_even(int operand1);
+/*checks if a number is odd or even*/
+
+int pslindrome(int operand1)
+  /*checks if a number is plaindrom or not*/
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
