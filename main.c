@@ -13,7 +13,7 @@ int calculator_operand1 = 0;
 int calculator_operand2 = 0;
 
 /* Valid operations */
-enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, EXIT };
+enum operations{ ADD=1, SUBTRACT, MULTIPLY, DIVIDE, FACTORIAL, ODD_EVEN, EXIT };
 
 /* Display the menu of operations supported */
 void calculator_menu(void);
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 void calculator_menu(void)
 {
     printf("\nAvailable Operations\n");
-    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5. Exit");
+    printf("\n1. Add\n2. Subtract\n3. Multiply\n4. Divide\n5.Factorial\n6.Odd_even\n");
     printf("\n\tEnter your choice\n");
    
      __fpurge(stdin);
@@ -113,7 +113,14 @@ void calculator_menu(void)
   /* Recursively calculate Factorial of the number */
   return operand1 * factorial(operand1-1);
 }
-
+        case ODD_EVEN:
+            int odd_even(int operand1)
+            {
+                if(operand1%2!=0)
+                    return -1;
+                if(operand1%2==0)
+                    return 0;
+            }
         case 5:
             exit(0);
             break;
