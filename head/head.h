@@ -47,4 +47,5 @@ int divide(int operand1, int operand2);
 
 int factorial(int operand1);
 
+int odd_even(int operand 1);
 #endif  /* #define __CALCULATOR_OPERATIONS_H__ */
