@@ -46,3 +46,19 @@ int odd_even(int operand1)
     if(operand1%2==0)
         return 0;
 }
+int palindrome(operand1)
+{
+    int temp,remain,sum=0;
+    temp=operand1;
+    while(operand1!=0)
+    {
+        remain=operand1%10;
+        sum=sum*10+remain;
+        operand1/=10;
+    }
+    if(sum==temp)
+        /*return 0 if number is plaindrome*/
+        return 0;
+    /*return -1 if number is not palindrome*/
+    else return -1;
+}
