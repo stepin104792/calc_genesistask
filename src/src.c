@@ -36,3 +36,13 @@ int factorial(int operand1)
   /* Recursively calculate Factorial of the number */
   return operand1 * factorial(operand1-1);
 }
+
+int odd_even(int operand 1)
+{
+    /*Return -1 for odd*/
+    if(operand1%2!=0)
+        return -1;
+    /*Return 0 for even*/
+    if(operand1%2==0)
+        return 0;
+}
